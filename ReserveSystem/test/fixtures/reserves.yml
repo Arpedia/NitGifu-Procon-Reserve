@@ -1,7 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  reserve_id: 1
+  reserve_id1: 1
+  reserve_id2: 1
   name: MyString
   age: 1
   sex: false
@@ -11,7 +12,8 @@ one:
   date: 1
 
 two:
-  reserve_id: 1
+  reserve_id1: 1
+  reserve_id2: 1
   name: MyString
   age: 1
   sex: false

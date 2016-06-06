@@ -19,7 +19,8 @@ class ReservesController < ApplicationController
 	def confirm
 		time = Time.now
 		@reserve = Reserve.new
-		@reserve.reserve_id = time.min+(time.hour*100)+(time.day*10000)+(time.month*1000000)+((time.year-2000)*100000000)
+		@reserve.reserve_id1 = time.min+(time.hour*100)+(time.day*10000)+(time.month*1000000)+((time.year-2000)*100000000)
+		@reserve.reserve_id2 = (time.sec*1000)+(time.usec*1)
 		@reserve.name = params[:reserve][:name]
 		@reserve.age = params[:reserve][:age]
 		@reserve.sex = params[:reserve][:sex]

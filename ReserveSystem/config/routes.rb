@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get "indexes/index"
 
-  get "indexes/show/:reserveID" => "indexes#show"
+  get "indexes/show/:reserveID1/:reserveID2" => "indexes#show"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

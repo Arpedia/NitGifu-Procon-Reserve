@@ -7,7 +7,7 @@
 	<li>性別　: <%= @confirm_info_sex %>　</li>
 	<li>住所　: <%= @reserve[:adress] %>　</li>
 	<li>電話番号　: <%= @reserve[:phonenum] %>　</li>
-	<li>予約施設ID: <%= @reserve[:facilityid] %> </li>
+	<li>予約施設ID: <%= @reserve[:facility_id] %> </li>
 	<li>予約日時　: <%= @reserve[:date] %>　</li>
 </u1>
 <%= form_for Confirm.new do |f| %>
