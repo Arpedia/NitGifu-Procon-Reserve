@@ -1,0 +1,10 @@
+<h1>予約ID:<%= @reserve[:reserve_id] %>　の詳細</h1>
+<p>予約施設ID: <%= @reserve[:facilityid] %></p>
+<u1>
+	<li>予約者名　: <%= @reserve[:name] %>　様</li>
+	<li>年齢　: <%= @reserve[:age] %>　歳</li>
+	<li>性別　: <%= @reserve_info_sex %>　</li>
+	<li>住所　: <%= @reserve[:adress] %>　</li>
+	<li>電話番号　: <%= @reserve[:phonenum] %>　</li>
+	<li>予約日時　: <%= @reserve[:date] %>　</li>
+</u1>

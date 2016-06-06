@@ -1,0 +1,8 @@
+<h1>予約一覧</h1>
+<p></p>
+<p></p>
+<p>予約ID　&nbsp&nbsp&nbsp&nbsp予約代表者</p>
+<% @reserves.each do |i| %>
+<p><u><%= i.reserve_id %> &nbsp&nbsp&nbsp&nbsp      <%= i.name %>様</u>&nbsp&nbsp
+<a href ="/indexes/show/<%= i.reserve_id %>"</p>
+<% end %>

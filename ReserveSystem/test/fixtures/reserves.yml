@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reserve_id: 1
+  name: MyString
+  age: 1
+  sex: false
+  adress: MyText
+  phonenum: 1
+  facility_id: 1
+  date: 1
+
+two:
+  reserve_id: 1
+  name: MyString
+  age: 1
+  sex: false
+  adress: MyText
+  phonenum: 1
+  facility_id: 1
+  date: 1

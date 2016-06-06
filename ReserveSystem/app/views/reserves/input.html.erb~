@@ -1,0 +1,18 @@
+<h1>予約情報入力フォーム</h1>
+<p>以下の項目をすべて入力してください。</p>
+<%=  form_for Reserve.new  do |f| %>
+<p></p>
+<br>
+<p><%=  %></p>
+<p> <%= f.label :name ,"代表者のお名前：" %><%= f.text_field :name %></p>
+<p> <%= f.label :age ,"年齢" %><%= f.collection_select :age ,Age.all , :age_info , :age_info ,:include_blank => true%></p>
+<p> <%= f.label :sex ,"性別" %>
+<%= f.radio_button :sex ,TRUE %><%= f.label :sexm ,"男性" %>
+<%= f.radio_button :sex ,FALSE %><%= f.label :sexf ,"女性" %></p>
+<p> <%= f.label :adress ,"代表者の住所：" %><%= f.text_area :adress, size:"30x2" %></p>
+<p> <%= f.label :phonenum ,"電話番号（ハイフン無し）：" %><%= f.telephone_field :phonenum %></p>
+<p> <%= f.label :facility_id ,"利用施設の識別番号：" %><%= f.number_field :facility_id %> &nbsp<a href ="/reserves/facility">施設番号</a></p>
+<p><%= f.label :date, "利用日："%><%= f.datetime_select :date ,:start_year => 2016 ,:include_blank => true ,:minute_step => 15 %></p>
+<br>
+<p> <%= f.submit "予約する"  %> </p>
+<% end %>
