@@ -7,12 +7,19 @@ Rails.application.routes.draw do
 	
 	get "reserves/create"
 	
+	get "reserves/createfailed"
+	
 	get "reserves/setup"
 	
   get "reserves/facility"
 
   get "indexes/index"
-
+	
+	get "indexes/reload"
+	post "delete" => "indexes#delete"
+	
+	get "indexes/delete"
+	
   get "indexes/show/:reserveID1/:reserveID2" => "indexes#show"
 
   # The priority is based upon order of creation: first created -> highest priority.

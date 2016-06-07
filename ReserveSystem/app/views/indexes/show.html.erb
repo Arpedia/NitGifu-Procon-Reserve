@@ -6,7 +6,10 @@
 	<li>性別　: <%= @reserve_info_sex %>　</li>
 	<li>住所　: <%= @reserve[:adress] %>　</li>
 	<li>電話番号　: <%= @reserve[:phonenum] %>　</li>
-	<li>予約日時　: <%= @reserve[:date] %>　</li>
+	<li>予約日時　: <%= @reserve[:date]/1000000 %>年
+    <%= @reserve[:date]/10000 - (@reserve[:date]/1000000)*100 %>月
+    <%= @reserve[:date]/100 -(@reserve[:date]/10000)*100 %>日
+    <%= @reserve[:date] -(@reserve[:date]/100)*100 %>時</li>
 </u1>
 <br>
 <a href ="/indexes/index" >一覧へ</a>

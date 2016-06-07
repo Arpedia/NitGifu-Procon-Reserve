@@ -1,11 +1,15 @@
 <h1>予約一覧</h1>
 <br>
 <br>
+<p>現在の予約件数：<%= @total %>件</p>
+<br>
 <p>予約ID　&nbsp&nbsp&nbsp&nbsp予約代表者</p>
 <% @reserves.each do |i| %>
-<p><u><%= i.reserve_id1 %>-<%= i.reserve_id2 %> &nbsp&nbsp&nbsp&nbsp<%= i.name %>様</u>&nbsp&nbsp
+<p><u><%= i.reserve_id1 %>-<%= i.reserve_id2 %> &nbsp&nbsp&nbsp&nbsp <%= i.name %>様 &nbsp <%= i.date %></u>&nbsp&nbsp
 <a href ="/indexes/show/<%= i.reserve_id1 %>/<%= i.reserve_id2 %>">詳細</a></p>
 <% end %>
 <br>
 <br>
-<a href ="/reserves/input">予約画面へ</a>
+<p><a href ="/reserves/input">予約画面へ</a></p>
+<br>
+<p><a href ="/indexes/reload">ここを押して</a>予約情報を整理します。</p>
