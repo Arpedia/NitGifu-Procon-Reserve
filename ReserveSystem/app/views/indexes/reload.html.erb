@@ -1,0 +1,20 @@
+<h1>データ整理</h1>
+<p>削除対象の件数：<%= @deletedNum %>件</p>
+<br>
+<% @deleteRecord.each do |i| %>
+<p><u><%= i.reserve_id1 %>-<%= i.reserve_id2 %> &nbsp&nbsp&nbsp&nbsp <%= i.name %>様 
+&nbsp <%= i.date %></u></p>
+<% end %>
+<br>
+<% if @deletedNum > 0 then %>
+<p>上記の2つを削除します。よろしいですか。</p>
+<%= form_for Confirm.new, :url => {:action => "delete"} do |f| %>
+<%= f.radio_button :confirm ,TRUE %><%= f.label :yes ,"はい" %>
+<%= f.radio_button :confirm ,FALSE %><%= f.label :no ,"いいえ" %></p>
+<br>
+<p><%= f.submit "削除" %></p>
+<% end %>
+<% else %>
+<% end %>
+<br>
+<a href ="/indexes/index" >一覧へ</a>
