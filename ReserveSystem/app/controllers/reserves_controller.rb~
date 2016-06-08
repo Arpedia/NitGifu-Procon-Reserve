@@ -20,7 +20,7 @@ class ReservesController < ApplicationController
 		time = Time.now
 		@reserve = Reserve.new
 		@reserve.reserve_id1 = time.min+(time.hour*100)+(time.day*10000)+(time.month*1000000)+((time.year-2000)*100000000)
-		@reserve.reserve_id2 = time.sec*1000+time.usec*1
+		@reserve.reserve_id2 = (time.sec*1000)+(time.usec*1)
 		@reserve.name = params[:reserve][:name]
 		@reserve.age = params[:reserve][:age]
 		@reserve.sex = params[:reserve][:sex]
@@ -43,7 +43,10 @@ class ReservesController < ApplicationController
 		if @confirm.confirm == true then
 			@create = Reserve.new
 			@create = @@reserve
-			@create.save
+			flag = @create.save
+			if flag == true then
+			else
+				redirect_to '/reserves/createfailed'
 		else
 			redirect_to '/reserves/input'
 		end

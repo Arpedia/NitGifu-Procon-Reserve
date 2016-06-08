@@ -4,7 +4,7 @@
 <p>予約ID　&nbsp&nbsp&nbsp&nbsp予約代表者</p>
 <% @reserves.each do |i| %>
 <p><u><%= i.reserve_id1 %>-<%= i.reserve_id2 %> &nbsp&nbsp&nbsp&nbsp<%= i.name %>様</u>&nbsp&nbsp
-<a href ="/indexes/show/<%= i.reserve_id1 %>-<%= i.reserve_id2 %>">詳細</a></p>
+<a href ="/indexes/show/<%= i.reserve_id1 %>/<%= i.reserve_id2 %>">詳細</a></p>
 <% end %>
 <br>
 <br>

@@ -4,7 +4,7 @@ class IndexesController < ApplicationController
   end
 
   def show
-  	@reserve = Reserve.find_by(:reserve_id1 => params[:reserveID1],:reservve_id2 => params[:reserveID2])
+  	@reserve = Reserve.find_by(:reserve_id1 => params[:reserveID1],:reserve_id2 => params[:reserveID2])
   	if @reserve[:sex] == TRUE then
   		@reserve_info_sex = "男性"
   	else
