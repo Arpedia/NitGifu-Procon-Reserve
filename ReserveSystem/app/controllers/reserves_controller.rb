@@ -34,7 +34,7 @@ class ReservesController < ApplicationController
 		@reserve.facility_id = params[:reserve][:facility_id]
 		
 		@reserve.date = (params[:reserve][:"date(1i)"].to_i)*1000000+(params[:reserve][:"date(2i)"].to_i)*10000+(params[:reserve][:"date(3i)"].to_i)*100+(params[:reserve][:"date(4i)"].to_i)*1
-		@@reserve=@reserve
+			@@reserve=@reserve
 	end
 	
 	def create
@@ -43,7 +43,11 @@ class ReservesController < ApplicationController
 		if @confirm.confirm == true then
 			@create = Reserve.new
 			@create = @@reserve
-			@create.save
+			flag = @create.save
+			if flag == true then
+			else
+				redirect_to '/reserves/createfailed'
+			end
 		else
 			redirect_to '/reserves/input'
 		end
