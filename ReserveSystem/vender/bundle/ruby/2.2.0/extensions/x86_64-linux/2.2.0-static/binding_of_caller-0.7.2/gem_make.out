@@ -1,0 +1,12 @@
+/home/hiro/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160615-3453-g5ta9a.rb extconf.rb
+
+make "DESTDIR=" clean
+make: *** ターゲット `clean' を make するルールがありません.  中止.
+
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+make "DESTDIR=" install
+echo "Nada."
+Nada.

@@ -1,0 +1,11 @@
+/home/hiro/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160615-3453-1m9gvyt.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20160615-3453-6jifgu

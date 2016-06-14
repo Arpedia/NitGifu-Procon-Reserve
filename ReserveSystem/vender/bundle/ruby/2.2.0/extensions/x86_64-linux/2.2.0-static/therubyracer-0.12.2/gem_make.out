@@ -1,0 +1,39 @@
+/home/hiro/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160615-3453-u7es14.rb extconf.rb
+checking for main() in -lpthread... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling date.cc
+compiling handles.cc
+compiling exception.cc
+compiling gc.cc
+compiling signature.cc
+compiling array.cc
+compiling constraints.cc
+compiling constants.cc
+compiling script.cc
+compiling init.cc
+compiling heap.cc
+compiling trycatch.cc
+compiling backref.cc
+compiling invocation.cc
+compiling value.cc
+compiling external.cc
+compiling message.cc
+compiling object.cc
+compiling function.cc
+compiling accessor.cc
+compiling rr.cc
+compiling locker.cc
+compiling context.cc
+compiling primitive.cc
+compiling string.cc
+compiling template.cc
+compiling stack.cc
+compiling v8.cc
+linking shared-object v8/init.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 init.so ./.gem.20160615-3453-2ozesl/v8
