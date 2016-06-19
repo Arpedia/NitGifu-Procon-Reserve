@@ -2,8 +2,8 @@ require 'time'
 class IndexesController < ApplicationController
 	#@@nowdate = 0
   def index
+		Reserve.reorder(":date")
   	@reserves = Reserve.all
-		Reserve.order(":date")
   	@total = Reserve.count
   end
 	

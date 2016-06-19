@@ -7,7 +7,7 @@
 <% end %>
 <br>
 <% if @deletedNum > 0 then %>
-<p>上記の2つを削除します。よろしいですか。</p>
+<p>上記のデータを削除します。よろしいですか。</p>
 <%= form_for Confirm.new, :url => {:action => "delete"} do |f| %>
 <%= f.radio_button :confirm ,TRUE %><%= f.label :yes ,"はい" %>
 <%= f.radio_button :confirm ,FALSE %><%= f.label :no ,"いいえ" %></p>
